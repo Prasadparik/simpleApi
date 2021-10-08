@@ -4,12 +4,13 @@ const Subscriber = require("../models/subscriber");
 
 //  Getting all
 router.get("/", async (req, res) => {
-  try {
-    const subscribers = await Subscriber.find();
-    res.send(subscribers);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+  res.send("Hello There!");
+  //   try {
+  //     const subscribers = await Subscriber.find();
+  //     res.send(subscribers);
+  //   } catch (err) {
+  //     res.status(500).json({ message: err.message });
+  //   }
 });
 //  Getting one
 router.get("/:id", (req, res) => {
